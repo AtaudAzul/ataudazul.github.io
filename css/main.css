@@ -190,7 +190,7 @@ nav ul li figcaption {
     float: right;
     font-size: 1.6em;
     height: auto;
-    margin-top: -40px;
+    margin-top: -38px;
     right: 0px;
     width: 162px;
 }
@@ -260,6 +260,12 @@ nav ul li figcaption {
 }
 /* Smartphones (landscape) x2 ----------- */
 @media only screen and (min-width : 384px) {
+    nav ul li{
+        width: 93px;
+    }
+    nav ul li figure {
+        margin-left: 21px;
+    }
 }
 /* iPhone 3 (landscape) ----------- */
 @media only screen and (min-width : 480px) {
