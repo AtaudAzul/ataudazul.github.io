@@ -48,5 +48,5 @@ require([
 	// Initialize sections
 	new View_header();
 	new View_body();
-	//new View_footer();
+	new View_footer();
 });
