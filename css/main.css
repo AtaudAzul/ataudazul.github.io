@@ -87,7 +87,7 @@ footer {
     z-index: 2;
 }
 footer .wrapper {
-    width: 320px;
+    width: 100%;
 }
 nav ul{
     margin: 0px;
@@ -96,9 +96,12 @@ nav ul{
 nav ul li{
     cursor: pointer;
     float: left;
-    list-style: none;
     height: 50px;
+    list-style: none;
     width: 50px;
+}
+nav ul li span{
+    float: left;
 }
 nav ul li:nth-child(1){
     height: auto;
@@ -133,17 +136,20 @@ nav ul li:nth-child(4) figure {
 }
 nav ul li figcaption {
     color: #EEE;
-    display: table;
+    display: table-cell;
+    vertical-align: middle;
     font-family: 'Gibson';
     font-weight: bold;
-    font-size: 17px;
-    float: left;
+    font-size: 1em;
     line-height: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 19px;
-    text-shadow: 2px 2px 0px rgba(0,0,0, 0.7);
+    overflow: visible;
+    padding: 10px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,.7);
     visibility: hidden;
+    width: 100%;
+}
+.extra-figcaption {
+    display: none;
 }
 .pab {
     background-image: url(../images/ui/p2014.png);
@@ -233,8 +239,19 @@ nav ul li figcaption {
     text-align: justify;
 }
 
+/* -MEDIAQUERYS FOR STANDARS- */
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (min-width : 320px) {
+    nav ul li {
+        width: 79px;
+    }
+    nav ul li figure {
+        margin-left: 15px;
+    }
+    .body-wrapper {
+        margin-left: 50px;
+    }
     .social {
         font-size: 2em;
         margin-top: -43px;
@@ -243,9 +260,19 @@ nav ul li figcaption {
 }
 /* iPhone 3 (landscape) ----------- */
 @media only screen and (min-width : 480px) {
+    nav ul li{
+        display: table;
+        width: 125px;
+    }
+    nav ul li figure {
+        margin-left: 0px;
+    }
+    nav ul li figcaption {
+        visibility: visible;
+    }
     .title {
         visibility: visible;
-    } 
+    }
 }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width : 768px) {
@@ -257,8 +284,17 @@ nav ul li figcaption {
     header .triangle-container {
         top: 100px;
     }
+    nav ul li {
+        width: 221px;
+    }
+    nav ul li figcaption {
+        font-size: 1.5em;
+    }
     .body-container {
         top: 100px;
+    }
+    .extra-figcaption {
+        display: block;
     }
     .logo {
         background-size: 100px;
@@ -281,26 +317,41 @@ nav ul li figcaption {
 }
 /* iPhone 4 (landscape) ----------- */
 @media only screen and (min-width : 960px) {
-    .body-wrapper {
-        margin-left: 50px;
-    }
 }
 /* iPads (landscape) ----------- */
 @media only screen and (min-width : 1024px) {
+    footer {
+        height: 75px;
+    }
+    nav ul li {
+        height: 75px;
+        width: 275px;
+    }
+    nav ul li figure{
+        background-size: 75px;
+        height: 75px;
+        width: 75px;
+    }
+    nav ul li figcaption {
+        font-size: 1.7em;
+    }
+    .pab {
+        background-size: 200px;
+        margin-top: -125px;
+        margin-left: -45px;
+        height: 200px;
+        width: 200px;
+    }
     .body-wrapper {
         margin-left: 100px;
     }
 }
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) {
-    .body-wrapper {
-        margin-left: 150px;
-    }
 }
 /* Large screens ----------- */
 @media only screen and (min-width : 1824px) {
 }
-
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 }
