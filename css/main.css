@@ -258,6 +258,9 @@ nav ul li figcaption {
         width: 208px;
     }
 }
+/* Smartphones (landscape) x2 ----------- */
+@media only screen and (min-width : 384px) {
+}
 /* iPhone 3 (landscape) ----------- */
 @media only screen and (min-width : 480px) {
     nav ul li{
